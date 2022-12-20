@@ -4,7 +4,7 @@ import { GET_TODO_FAILED, GET_TODO_REQUEST, GET_TODO_SUCCESS } from "../constant
 export const getAllTodos = () => async (dispatch) => {
     dispatch({ type: GET_TODO_REQUEST })
     try {
-        const res = await axios.get("");
+        const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
         dispatch({
             type: GET_TODO_SUCCESS,
             payload: res.data
